@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
+    <link      rel="stylesheet"      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1> <img class="image-profile" src="src/pokemon.png" alt="Pokemon"></h1>
+      <div class="search-container">
+        <label class ="buscar-for-name" for="search-input">Buscar por nombre:</label>
+        <input type="search" id="search-input" placeholder="Ingresa el Pokémon que quieres que busque" />
+        <button id="search-button" class="button is-warning">Buscar</button>
+      </div>
+      <div id="pokedata"></div>
+    </main>
+
+    <dialog id="modal">
+      <article class="modal-content">      
+        <p><strong>Nombre:</strong> <span id="modal-title"></span></p>
+        <p><strong>Número:</strong> <span id="modal-number"></span></p>
+        <p><strong>Peso:</strong> <span id="modal-weight"></span></p>
+        <p><strong>Altura:</strong> <span id="modal-height"></span></p>
+        <p><strong>Tipo:</strong> <span id="modal-type"></span></p>
+        <p><strong>Debilidades:</strong> <span id="modal-weakness"></span></p>            
+        <button class="button is-warning" id="modal-close">Cerrar</button>        
+      </article>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
